@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #45503b;
+  color: #e5ebea;
+}
+header img {
+  width: 50px;
+}
+
+.meme-container {
+  width: 87%;
+  margin: 5rem auto;
+  min-height: 100vh;
+  max-width: 600px;
+}
+.meme-container input {
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+}
+.meme-container input:focus {
+  outline: 1px solid #45503b;
+}
+.meme-container button {
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  background-color: #45503b;
+  color: #e5ebea;
+  border: 1px solid #45503b;
+  cursor: pointer;
+}
+.meme-container button:active {
+  background-color: #42562f;
+}
+.meme-container .meme-wrapper {
+  margin: 2rem 0;
+  height: 400px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+.meme-container .meme {
+  position: relative;
+  height: 100%;
+}
+.meme-container .meme p {
+  font-family: "Anton", sans-serif;
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  width: 80%;
+  transform: translateX(-50%);
+  padding: 1.2rem 0;
+  font-size: 2rem;
+  color: #e5ebea;
+  text-shadow: 1px -2px 4px #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin: 0;
+}
+.meme-container .meme .top-text {
+  top: 0;
+}
+.meme-container .meme .bottom-text {
+  bottom: 0;
+}
+.meme-container .meme img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.text-container {
+  display: block;
+}
+
+footer {
+  text-align: center;
+  color: #e5ebea;
+  background-color: #45503b;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 550px) {
+  .text-container {
+    display: flex;
+    gap: 1.2rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

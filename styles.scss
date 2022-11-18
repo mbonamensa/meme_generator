@@ -1,0 +1,150 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Karla:wght@300;400;700&display=swap');
+
+// Color variables
+$rifle-green: #45503b;
+$platinum: #e5ebea;
+$dark-rifle-green: #42562f;
+
+// Root
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Karla", sans-serif;
+}
+
+h1 {
+    font-size: 1.3rem;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: $rifle-green;
+    color: $platinum;
+
+    img {
+        width: 50px
+    }
+
+}
+
+.meme-container {
+    width: 87%;
+    margin: 5rem auto;
+    min-height: 100vh;
+    max-width: 600px;
+
+    input {
+        width: 100%;
+        padding: 0.7rem;
+        margin: 0.5rem 0;
+        border-radius: 5px;
+        border: 1px solid lightgrey;
+
+        &:focus {
+            outline: 1px solid $rifle-green;
+        }
+    }
+
+    button {
+        width: 100%;
+        padding: 0.7rem;
+        margin: 0.5rem 0;
+        border-radius: 5px;
+        background-color: $rifle-green;
+        color: $platinum;
+        border: 1px solid $rifle-green;
+        cursor: pointer;
+
+        &:active {
+            background-color: $dark-rifle-green;
+        }
+    }
+
+    .meme-wrapper {
+        margin: 2rem 0;
+        height: 400px;
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+    }
+
+    .meme {
+        position: relative;
+        height: 100%;
+        
+
+        p {
+            font-family: "Anton", sans-serif;
+            position: absolute;
+            left: 50%;
+            text-align: center;
+            width: 80%;
+            transform: translateX(-50%);
+            padding: 1.2rem 0;
+            font-size: 2rem;
+            color: $platinum;
+            text-shadow: 1px -2px 4px #000000;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            margin: 0;
+            
+        }
+
+        .top-text {
+            top: 0;
+        }
+
+        .bottom-text {
+            bottom: 0;
+        }
+
+        img {
+           height: 100%;
+           object-fit: contain;
+        }
+
+       
+    }
+
+   
+
+}
+
+.spinner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.text-container {
+    display: block;
+}
+
+footer {
+    text-align: center;
+    color: $platinum;
+    background-color: $rifle-green;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 550px ) {
+    .text-container {
+        display: flex;
+        gap: 1.2rem;
+    }
+}
