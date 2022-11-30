@@ -74,7 +74,6 @@ header img {
   position: absolute;
   left: 50%;
   text-align: center;
-  width: 80%;
   transform: translateX(-50%);
   padding: 1.2rem 0;
   font-size: 2rem;
@@ -83,6 +82,7 @@ header img {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   margin: 0;
+  cursor: move;
 }
 .meme-container .meme .top-text {
   top: 0;

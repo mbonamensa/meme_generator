@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
+import Draggable from "react-draggable";
 
 function Meme() {
   const [meme, setMeme] = useState({
     topText: "I am the",
     bottomText: "Baddest Bitch!!",
-    randomImg: "../img/shrek-meme.jpg"
+    randomImg: "./img/shrek-meme.jpg"
   });
   const [allMemes, setAllMemes] = useState([]);
   const [loading, setLoading] = useState(true)
@@ -74,8 +75,8 @@ function Meme() {
         ) : (
           <div className="meme">
             <img src={meme.randomImg} alt="meme-img" />
-            <p className="top-text">{meme.topText}</p>
-            <p className="bottom-text">{meme.bottomText}</p>
+            <Draggable bounds="parent" defaultPosition={{x: -66, y: 0 }}><p className="top-text">{meme.topText}</p></Draggable>
+            <Draggable bounds="parent" defaultPosition={{x: -100, y: 0}}><p className="bottom-text">{meme.bottomText}</p></Draggable>
           </div>
         )}
       </div>
