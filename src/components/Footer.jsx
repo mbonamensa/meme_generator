@@ -6,7 +6,7 @@ function Footer() {
 
     return (
       <footer>
-        <small>Memes.2022</small>
+        <small>Memes &#183; 2022</small>
       </footer>
     )
   }
