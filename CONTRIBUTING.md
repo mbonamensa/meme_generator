@@ -14,4 +14,4 @@ Please note we have a code of conduct, please follow it in all your interactions
 5. Open a Pull Request
 
 ## Code of Conduct
-Check the code of conduct [here](https://github.com/tcrz/CardFlip-Game/blob/master/CODE%20OF%20CONDUCT.md).
+Check the code of conduct [here](https://github.com/mbonamensa/practice-meme_generator/blob/master/CODE_OF_CONDUCT.md).
