@@ -1,9 +1,9 @@
 ---
 name: Feature request
 about: Suggest a feature that solves a problem for this project
-title: "[FEATURE]"
-labels: ''
-assignees: ''
+title: "[FEATURE] <Add an actual title here>"
+labels: enhancement
+assignees: mbonamensa
 
 ---
 
