@@ -1,82 +1,68 @@
 # Meme Generator
 
-This is my recreation of the Meme Generator Project from the [Learn React for Free](https://scrimba.com/learn/learnreact) course on Scrimba
+A meme generator that allows you to create memes from random images.
 
 ## Table of contents
-
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
+  - [About the project](#about-the-project)
+  - [Stack](#stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Setting up locally](#setting-up-locally)
+- [Contribution](#contribution)
+- [Code of Conduct](#code-of-conduct)
+- [Liscense](#liscense)
 
 
 ## Overview
 
-### The challenge
+### About the project
 
-A meme generator that 
-- fetches and displays random images from a memes API
-- has inputs whose values serve as the top and bottom text of the meme
+A web application that allows a user to create memes from random images by adding a top and bottom text to the image.
+![](./public/img/screenshot.png)
 
-
-### Links
-
-- Solution URL: [Repo](https://github.com/mbonamensa/practice-meme_generator)
-- Live Site URL: [Memes Generator](https://mbonamensa.github.io/practice-meme_generator/)
-- Figma file: [From Scrimba](https://www.figma.com/file/MoLwFPHNHJVrzdFurxHzNV/Meme-Generator?node-id=0%3A1)
-
-## My process
-
-### Built with
-
+### Stack
 - React
-    - Components
-    - Props
-    - useState
-    - useEffect
-    - Draggable package
 - SASS
-- Mobile-first workflow
 
-### What I learned
+## Getting Started
 
-I practiced creating the meme generator all over again, going over how to use props, useState, useEffect and fetchAPI. A new thing I learned while building was making elements movable/draggable using the [react-draggable](https://npm.io/package/react-draggable) package. I decided to add that as a stretch goal. I also added a loader aesthetic for when the meme images are still loading using [react-bootstrap spinners](https://react-bootstrap.github.io/components/spinners/) by conditionally rendering the images.
+### Prerequesites
+- [Nodejs and Node Package Manager(NPM)](https://nodejs.org/en/download/) to run commands and the application correctly.
 
 
-```jsx
-     <div className="meme-wrapper">
-        {loading ? (
-          <div className="spinner-container">
-            <Spinner animation="border" />
-          </div>
-        ) : (
-          <div className="meme">
-            <img src={meme.randomImg} alt="meme-img" />
-            <Draggable bounds="parent" defaultPosition={{x: -66, y: 0 }}><p className="top-text">{meme.topText}</p></Draggable>
-            <Draggable bounds="parent" defaultPosition={{x: -100, y: 0}}><p className="bottom-text">{meme.bottomText}</p></Draggable>
-          </div>
-        )}
-      </div>
+### Setting up locally
+Follow these steps to set up the project locally on your computer:
+
+1. Open your terminal and clone the repository
+```
+git clone git@github.com:mbonamensa/meme_generator.git
+```
+You can find other ways of cloning repositories that work best for you [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+
+2. Enter the project directory/folder
+```
+cd meme_generator
 ```
 
+3. Install dependencies
+```
+npm install
+```
 
-### Continued development
+4. Run the app in your browser
+```
+npm run dev
+```
 
-I'm looking at adding more features to make it easy to use. 
-You can only have two sets of texts, and cannot download the meme.
+## Contribution
+Any contribution you make to this project is highly appreciated and will not be taken for granted. To add your awesome knowledge and skills to this project, please make sure to read the [contribution guidelines](https://github.com/mbonamensa/meme_generator/blob/main/CONTRIBUTING.md) and create an [issue](https://github.com/mbonamensa/meme_generator/issues) first, before making a pull request.
 
-### Useful resources
+## Code of Conduct
+Please read the [Code of Conduct](https://github.com/mbonamensa/meme_generator/blob/main/CODE_OF_CONDUCT.md) to be aware of what is welcoming and what is not in your contribution to this project.
 
-- [Learn react for free](https://scrimba.com/learn/learnreact) 
-- [React Draggable example](https://github.com/react-grid-layout/react-draggable/blob/master//example/example.js) 
+## Liscense
+This project is under the [MIT License](https://github.com/mbonamensa/meme_generator/blob/main/LICENSE)
 
 
-## Author
 
-- Website - [Maame Yaa Serwaa Bona-Mensa](https://mbonamensa.netlify.app)
-- Twitter - [@mys_bm](https://www.twitter.com/mys_bm)
