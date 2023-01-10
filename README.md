@@ -26,8 +26,8 @@ A meme generator that
 
 ### Links
 
-- Solution URL: [Repo](https://github.com/mobonamensa/imb-meme-generator)
-- Live Site URL: [Memes Generator](https://mbonamensa.github.io/imb-meme-generator)
+- Solution URL: [Repo](https://github.com/mbonamensa/practice-meme_generator)
+- Live Site URL: [Memes Generator](https://mbonamensa.github.io/practice-meme_generator/)
 - Figma file: [From Scrimba](https://www.figma.com/file/MoLwFPHNHJVrzdFurxHzNV/Meme-Generator?node-id=0%3A1)
 
 ## My process
