@@ -6,44 +6,47 @@ function Meme() {
   const [meme, setMeme] = useState({
     topText: "I am the",
     bottomText: "Baddest Bitch!!",
-    randomImg: "./img/shrek-meme.jpg"
+    randomImg: "./img/shrek-meme.jpg",
   });
   const [allMemes, setAllMemes] = useState([]);
-  const [loading, setLoading] = useState(true)
-
+  const [loading, setLoading] = useState(true);
+  console.log(allMemes);
   const fetchImages = () => {
+    setLoading(true);
     return fetch("https://api.imgflip.com/get_memes")
       .then((res) => res.json())
       .then((data) => {
         setAllMemes(data.data.memes);
-        setLoading(false)
-      })
-       
-      
+        setLoading(false);
+      });
   };
 
   useEffect(() => {
-    fetchImages(); 
-  }, [loading]);
+    fetchImages();
+  }, []);
+
 
   // Generate random memes
   const randomMemeImg = () => {
-    setLoading(prevLoad => !prevLoad)
-    const randomNum = Math.floor(Math.random() * allMemes.length)
-    const url = allMemes[randomNum].url
-    setMeme(prevMeme => ({
-      ...prevMeme,
-      randomImg: url
-    }))
-  }
+    setLoading(true);
+    const randomNum = Math.floor(Math.random() * allMemes.length);
+    const url = allMemes[randomNum].url;
+    setTimeout(() => {
+      setMeme((prevMeme) => ({
+        ...prevMeme,
+        randomImg: url,
+      }));
+      setLoading(false);
+    }, 200);
+  };
 
   const handleInputChange = (event) => {
-    const { name, value } = event.target
-    setMeme(prevMeme => ({
+    const { name, value } = event.target;
+    setMeme((prevMeme) => ({
       ...prevMeme,
-      [name]: value
-    }))
-  }
+      [name]: value,
+    }));
+  };
 
   return (
     <section className="meme-container">
@@ -75,8 +78,12 @@ function Meme() {
         ) : (
           <div className="meme">
             <img src={meme.randomImg} alt="meme-img" />
-            <Draggable bounds="parent" defaultPosition={{x: -66, y: 0 }}><p className="top-text">{meme.topText}</p></Draggable>
-            <Draggable bounds="parent" defaultPosition={{x: -100, y: 0}}><p className="bottom-text">{meme.bottomText}</p></Draggable>
+            <Draggable bounds="parent" defaultPosition={{ x: -66, y: 0 }}>
+              <p className="top-text">{meme.topText}</p>
+            </Draggable>
+            <Draggable bounds="parent" defaultPosition={{ x: -100, y: 0 }}>
+              <p className="bottom-text">{meme.bottomText}</p>
+            </Draggable>
           </div>
         )}
       </div>
