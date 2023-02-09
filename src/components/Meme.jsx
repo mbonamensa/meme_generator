@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
 import Draggable from "react-draggable";
+import html2canvas from "html2canvas";
+// import { saveAs } from "file-saver";
 
 function Meme() {
   const [meme, setMeme] = useState({
@@ -48,6 +50,15 @@ function Meme() {
     }));
   };
 
+  const handleDownload = () => {
+    html2canvas(document.querySelector(".meme")).then((canvas) => {
+      const link = document.createElement("a");
+      link.href = canvas.toDataURL();
+      link.download = "meme.png";
+      link.click();
+    });
+  };
+
   return (
     <section className="meme-container">
       <div className="text-container">
@@ -77,7 +88,7 @@ function Meme() {
           </div>
         ) : (
           <div className="meme">
-            <img src={meme.randomImg} alt="meme-img" />
+            <img src={meme.randomImg} alt="meme-img"/>
             <Draggable bounds="parent" defaultPosition={{ x: -66, y: 0 }}>
               <p className="top-text">{meme.topText}</p>
             </Draggable>
@@ -87,6 +98,8 @@ function Meme() {
           </div>
         )}
       </div>
+      
+      <button onClick={handleDownload}>Download Meme</button>
     </section>
   );
 }
